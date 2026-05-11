@@ -241,9 +241,9 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   4. PRELOADER  KOUSHIK
+   4. PRELOADER
    -------------------------------------------------------------------------- */
-/* #preloader {
+#preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -326,120 +326,6 @@ p {
 @keyframes spin {
   100% {
     transform: rotate(360deg);
-  }
-} */
-
-/* ==========================================================================
-   4. PRELOADER (Bone Icon Version)
-   ========================================================================== */
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--white);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: var(--z-preloader);
-  transition:
-    opacity 0.5s ease,
-    visibility 0.5s ease;
-}
-
-#preloader.loaded {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.preloader-inner {
-  text-align: center;
-  position: relative;
-  z-index: 10;
-}
-
-/* Container for the bone to center it */
-.preloader-bone-wrapper {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto var(--space-6) auto;
-  position: relative;
-}
-
-/* The Bone Icon Itself */
-.preloader-bone-wrapper i {
-  font-size: 60px; /* Size of the bone */
-  color: var(--primary);
-  z-index: 2;
-  animation: boneFloat 2s ease-in-out infinite;
-}
-
-/* Pulse Ring behind the bone (Medical feel) */
-.bone-pulse-ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  background: rgba(var(--primary-rgb), 0.15);
-  border-radius: 50%;
-  z-index: 1;
-  animation: pulseRing 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-}
-
-/* Text Styles */
-.preloader-text {
-  font-family: var(--font-heading);
-  font-size: var(--text-2xl);
-  color: var(--primary-dark);
-  margin-bottom: 0;
-  font-weight: 700;
-  opacity: 0;
-  animation: fadeInText 0.5s ease forwards 0.5s;
-}
-
-.preloader-sub {
-  font-size: var(--text-sm);
-  color: var(--text-light);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  opacity: 0;
-  animation: fadeInText 0.5s ease forwards 0.7s;
-}
-
-/* Animations */
-@keyframes boneFloat {
-  0% {
-    transform: translateY(0) rotate(-10deg);
-  }
-  50% {
-    transform: translateY(-10px) rotate(10deg);
-  }
-  100% {
-    transform: translateY(0) rotate(-10deg);
-  }
-}
-
-@keyframes pulseRing {
-  0% {
-    transform: translate(-50%, -50%) scale(0.8);
-    opacity: 0.7;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1.8);
-    opacity: 0;
-  }
-}
-
-@keyframes fadeInText {
-  to {
-    opacity: 1;
   }
 }
 
@@ -923,7 +809,6 @@ body:hover #cursor-follower {
 .btn-white {
   background: var(--white);
   color: var(--primary);
-  border: 2px solid var(--primary);
 }
 
 .btn-white:hover {
@@ -1047,8 +932,7 @@ body:hover #cursor-follower {
   max-width: 700px;
 }
 
-/* Koushik */
-/* .page-hero-appointment {
+.page-hero-appointment {
   background: linear-gradient(
     135deg,
     var(--primary-dark) 0%,
@@ -1068,45 +952,6 @@ body:hover #cursor-follower {
 
 .page-hero-appointment .section-badge {
   background: rgba(255, 255, 255, 0.15);
-} */
-
-/* ---------------------------------------------------------------
-   REPLACE THIS BLOCK IN styles.css (around line 650-680)
-   --------------------------------------------------------------- */
-.page-hero-appointment {
-  background: linear-gradient(135deg, var(--bg-alt) 0%, var(--white) 100%);
-  color: var(--text-dark);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Add a subtle medical pattern overlay */
-.page-hero-appointment::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(var(--primary) 1px, transparent 1px);
-  background-size: 20px 20px;
-  opacity: 0.05;
-}
-
-/* Keep text dark for consistency, not white */
-.page-hero-appointment .page-hero-title,
-.page-hero-appointment .section-badge {
-  color: var(--primary-dark);
-}
-
-.page-hero-appointment .page-hero-subtitle {
-  color: var(--text-light);
-}
-
-/* Keep badge light instead of dark */
-.page-hero-appointment .section-badge {
-  background: rgba(var(--primary-rgb), 0.1);
-  color: var(--primary);
 }
 
 /* Animate on Scroll */
@@ -1480,27 +1325,12 @@ body:hover #cursor-follower {
   flex-shrink: 0;
 }
 
-/* .stat-number {
-  font-family: var(--font-body);
+.stat-number {
+  font-family: var(--font-heading);
   font-size: var(--text-3xl);
   font-weight: 800;
   color: var(--primary-dark);
   line-height: 1;
-} */
-
-/* ---------------------------------------------------------------
-   UPDATE THIS IN styles.css (around line 530) koushik
-   --------------------------------------------------------------- */
-
-.stat-number {
-  font-family: var(
-    --font-body
-  ) !important; /* Changed from heading to body font */
-  font-weight: 700; /* Heavy weight for impact */
-  font-size: var(--text-4xl); /* Slightly larger */
-  color: var(--primary-dark);
-  line-height: 1;
-  letter-spacing: -1px; /* Tighter spacing for modern look */
 }
 
 .stat-suffix {
@@ -2949,7 +2779,7 @@ body:hover #cursor-follower {
   margin-bottom: var(--space-2);
 }
 
-/* .form-group input,
+.form-group input,
 .form-group select,
 .form-group textarea {
   width: 100%;
@@ -2962,36 +2792,6 @@ body:hover #cursor-follower {
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
   outline: none;
-} */
-/* ---------------------------------------------------------------
-   UPDATE THIS BLOCK IN styles.css (around line 1575)
-   --------------------------------------------------------------- */
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: var(--space-3) var(--space-4);
-  font-family: var(--font-body);
-  font-size: 16px; /* 16px prevents iOS zoom */
-  color: var(--text-dark);
-  background: var(--white);
-  border: 1px solid var(--gray-300);
-  border-radius: var(--radius-md);
-  transition: all var(--transition-fast);
-  outline: none;
-}
-
-/* ADD THIS MOBILE FIX IMMEDIATELY AFTER THE ABOVE BLOCK */
-@media (max-width: 768px) {
-  .form-group input,
-  .form-group select {
-    min-height: 54px; /* Easier to tap with thumbs */
-  }
-
-  .form-group textarea {
-    min-height: 120px;
-  }
 }
 
 .form-group input:focus,
@@ -3046,9 +2846,9 @@ body:hover #cursor-follower {
 }
 
 /* --------------------------------------------------------------------------
-   24. CONTACT & APPOINTMENT PAGES koushik
+   24. CONTACT & APPOINTMENT PAGES
    -------------------------------------------------------------------------- */
-/* .contact-layout,
+.contact-layout,
 .appointment-layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -3139,102 +2939,6 @@ body:hover #cursor-follower {
   color: var(--text-dark);
 }
 
-.apt-info-cta {
-  background: rgba(var(--primary-rgb), 0.05);
-  border: 1px dashed var(--primary);
-} */
-
-/* ---------------------------------------------------------------
-   REPLACE THIS BLOCK IN styles.css (around line 1650)
-   --------------------------------------------------------------- */
-
-/* Main Grid Layout */
-.contact-layout,
-.appointment-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-8); /* Increased gap for mobile breathing room */
-  align-items: start; /* Prevents stretching on mobile */
-}
-
-/* Mobile specific padding for the container inside */
-@media (max-width: 767px) {
-  .contact-layout,
-  .appointment-layout {
-    gap: var(--space-6);
-  }
-
-  /* Ensure the form container isn't touching screen edges */
-  .premium-form,
-  .appointment-form {
-    padding: 0; /* Let the container handle padding */
-  }
-}
-
-/* Sidebar Styling (Time, Address, Call) */
-.contact-info-side,
-.appointment-info-side {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
-}
-
-.contact-info-card,
-.apt-info-card {
-  background: var(--white);
-  padding: var(--space-6); /* More padding for touch friendliness */
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--gray-100);
-  box-shadow: var(--shadow-sm);
-}
-
-/* Info Card Icons */
-.cic-icon {
-  width: 48px;
-  height: 48px;
-  background: rgba(var(--primary-rgb), 0.1);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
-  font-size: var(--text-xl);
-  margin-bottom: var(--space-4);
-}
-
-.contact-info-card h3,
-.apt-info-card h3 {
-  font-size: var(--text-lg);
-  margin-bottom: var(--space-3);
-  color: var(--primary-dark);
-}
-
-.contact-info-card p,
-.apt-info-card p {
-  font-size: var(--text-sm);
-  margin: 0;
-}
-
-/* Sidebar Info Rows (Time/Address) */
-.aic-details {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4); /* More spacing between lines */
-}
-
-.aic-row {
-  font-size: var(--text-sm);
-  color: var(--text-light);
-  line-height: 1.6;
-}
-
-.aic-row strong {
-  color: var(--text-dark);
-  display: block;
-  margin-bottom: 4px;
-}
-
-/* Special styling for the "Call CTA" card */
 .apt-info-cta {
   background: rgba(var(--primary-rgb), 0.05);
   border: 1px dashed var(--primary);
@@ -3719,9 +3423,7 @@ body:hover #cursor-follower {
   }
 }
 
-/* ------------------------------------------------------------------------------------------- */
-
-/* KOUSHIK WEBSITE MODIFICATION CODE */
+/* koushik */
 @media (max-width: 991px) {
   .btn-header {
     display: none;
