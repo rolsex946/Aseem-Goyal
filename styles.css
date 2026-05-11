@@ -1448,7 +1448,8 @@ body:hover #cursor-follower {
 /* Stats Bar */
 .hero-stats-bar {
   margin-top: auto;
-  padding: var(--space-12) 10px;
+  /* padding: var(--space-12) 10px; */
+  padding: var(--space-12) 20px var(--space-12) 0px;
   background: var(--white);
   border-top: 1px solid var(--gray-100);
   position: relative;
@@ -1817,7 +1818,8 @@ body:hover #cursor-follower {
     var(--primary) 100%
   );
   color: var(--white);
-  padding: var(--space-20) 0;
+  /* padding: var(--space-20) 0; */
+  padding: (--space-20) 20px var(--space-20) 0px;
   position: relative;
   overflow: hidden;
 }
