@@ -1448,7 +1448,7 @@ body:hover #cursor-follower {
 /* Stats Bar */
 .hero-stats-bar {
   margin-top: auto;
-  padding: var(--space-12) 0;
+  padding: var(--space-12) 10px;
   background: var(--white);
   border-top: 1px solid var(--gray-100);
   position: relative;
@@ -1497,7 +1497,7 @@ body:hover #cursor-follower {
     --font-body
   ) !important; /* Changed from heading to body font */
   font-weight: 700; /* Heavy weight for impact */
-  font-size: var(--text-4xl); /* Slightly larger */
+  font-size: var(--text-3xl); /* Slightly larger */
   color: var(--primary-dark);
   line-height: 1;
   letter-spacing: -1px; /* Tighter spacing for modern look */
@@ -1844,6 +1844,7 @@ body:hover #cursor-follower {
   align-items: center;
   position: relative;
   z-index: 1;
+  padding: 0px 10px 0px 0px;
 }
 
 .cta-content h2 {
@@ -3177,6 +3178,7 @@ body:hover #cursor-follower {
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
+  width: 90%;
 }
 
 .contact-info-card,
@@ -3730,7 +3732,7 @@ body:hover #cursor-follower {
 
 @media (max-width: 991px) {
   .hero-container {
-    padding: 30px;
+    padding: 25px;
   }
   .cta-stats {
     display: flex;
