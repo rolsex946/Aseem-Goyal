@@ -1016,6 +1016,11 @@ body:hover #cursor-follower {
 .page-hero {
   padding: 160px 0 80px;
   background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+  background: linear-gradient(
+    252deg,
+    #41bed152 0%,
+    var(--white) 100%
+  ) !important;
   position: relative;
   overflow: hidden;
 }
@@ -2830,7 +2835,7 @@ body:hover #cursor-follower {
   justify-content: center;
   font-size: 60px;
   color: var(--primary);
-  opacity: 0.2;
+  opacity: 0.9;
 }
 
 .gallery-overlay {
